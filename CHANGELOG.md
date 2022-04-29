@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* Accordions
+* Accordion Added
