@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:example/src/components/accordions.dart';
 import 'package:example/src/screens/components_page.dart';
+import 'package:example/src/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
@@ -29,9 +30,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: "TheSans",
-        textTheme: TextTheme(
-          bodyText1: TextStyle(fontSize: 20),
-          //bodyText2: TextStyle(fontSize: 20),
+        textTheme: const TextTheme(
+          headline1: TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold),
+          headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+          bodyText2: TextStyle(fontSize: 14.0),
         ),
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.white,
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/home',
       routes: {
-        '/home': (context) => SdxComponentPage(),
+        '/home': (context) => HomePage(),
       },
     );
   }
